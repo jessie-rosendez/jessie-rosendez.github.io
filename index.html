@@ -5,116 +5,174 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Jessie Rosendez</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#080c14;--surface:#0d1220;--surface2:#111827;
-  --border:rgba(255,255,255,0.07);--text:#e2e8f0;--muted:#64748b;--muted2:#94a3b8;
-  --accent:#4ade80;
+  --bg:#07090f;--surface:#0c1018;--surface2:#111620;--surface3:#161c28;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.1);
+  --text:#e8edf5;--muted:#5a6478;--muted2:#8a96aa;
+  --accent:#4ade80;--accent2:rgba(74,222,128,0.15);
+  --blue:#60a5fa;--blue2:rgba(96,165,250,0.12);
+  --amber:#fbbf24;
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex}
 a{color:inherit;text-decoration:none}
 
-/* LAYOUT */
-.sidebar{width:260px;min-width:260px;height:100vh;position:sticky;top:0;padding:48px 28px;display:flex;flex-direction:column;border-right:1px solid var(--border);background:var(--surface)}
-.main{flex:1;padding:64px 56px;max-width:860px}
+.sidebar{width:270px;min-width:270px;height:100vh;position:sticky;top:0;padding:40px 24px;display:flex;flex-direction:column;border-right:1px solid var(--border);background:var(--surface)}
+.main{flex:1;padding:60px 52px;max-width:840px}
 
-/* SIDEBAR */
-.sidebar h1{font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.2;margin-bottom:5px}
-.sidebar .role{font-size:12.5px;color:var(--muted2);margin-bottom:3px;font-weight:500}
-.sidebar .school{font-size:12px;color:var(--muted);margin-bottom:32px}
+.avatar-name{display:flex;align-items:center;gap:14px;margin-bottom:8px;align-items:center}
+.avatar{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;object-position:center top}
+.sidebar h1{font-size:18px;font-weight:700;letter-spacing:-0.02em;line-height:1.15}
+.sidebar .role{font-size:12px;color:var(--muted2);margin-bottom:2px;font-weight:500;margin-top:8px}
+.sidebar .school{font-size:11.5px;color:var(--muted);margin-bottom:28px}
 
-nav{display:flex;flex-direction:column;gap:3px;margin-bottom:auto}
-nav a{font-size:12px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);padding:8px 12px;border-radius:8px;display:flex;align-items:center;gap:10px;transition:all 0.2s;border:1px solid transparent}
-nav a:hover,nav a.active{color:var(--text);background:rgba(255,255,255,0.05);border-color:var(--border)}
-nav a .dot{width:5px;height:5px;border-radius:50%;background:var(--muted);flex-shrink:0;transition:background 0.2s}
+nav{display:flex;flex-direction:column;gap:2px;margin-bottom:auto}
+nav a{font-size:11.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);padding:7px 10px;border-radius:7px;display:flex;align-items:center;gap:9px;transition:all 0.2s;border:1px solid transparent}
+nav a:hover,nav a.active{color:var(--text);background:rgba(255,255,255,0.04);border-color:var(--border)}
+nav a .dot{width:4px;height:4px;border-radius:50%;background:var(--muted);flex-shrink:0;transition:background 0.2s}
 nav a:hover .dot,nav a.active .dot{background:var(--accent)}
 
-.socials{display:flex;gap:8px;margin-top:32px;padding-top:24px;border-top:1px solid var(--border)}
-.socials a{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--muted);transition:all 0.2s}
-.socials a:hover{color:var(--text);border-color:rgba(255,255,255,0.15)}
+.socials{display:flex;gap:7px;margin-top:28px;padding-top:20px;border-top:1px solid var(--border)}
+.socials a{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.03);border:1px solid var(--border);color:var(--muted);transition:all 0.2s}
+.socials a:hover{color:var(--text);border-color:var(--border2)}
 
-/* SECTIONS */
-section{margin-bottom:76px}
-.section-label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:28px;display:flex;align-items:center;gap:10px}
+section{margin-bottom:72px}
+.section-label{font-size:10.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;display:flex;align-items:center;gap:10px}
 .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* ABOUT */
-.about-text{font-size:14.5px;color:var(--muted2);line-height:1.85;margin-bottom:14px}
+.about-text{font-size:14px;color:var(--muted2);line-height:1.9;margin-bottom:12px}
 .about-text strong{color:var(--text);font-weight:600}
-.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.about-tag{background:rgba(74,222,128,0.06);border:1px solid rgba(74,222,128,0.14);border-radius:20px;padding:4px 13px;font-size:12px;color:#86efac;font-weight:500}
+.about-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.about-tag{background:var(--accent2);border:1px solid rgba(74,222,128,0.18);border-radius:20px;padding:3px 12px;font-size:11.5px;color:#86efac;font-weight:500}
 
-/* CARDS */
-.card{padding:22px 24px;border-radius:13px;border:1px solid var(--border);background:var(--surface2);margin-bottom:12px;transition:border-color 0.2s}
-.card:hover{border-color:rgba(255,255,255,0.13)}
+.card{padding:20px 22px;border-radius:12px;border:1px solid var(--border);background:var(--surface2);margin-bottom:10px;transition:border-color 0.2s}
+.card:hover{border-color:var(--border2)}
 .card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:3px;gap:12px}
-.card-title{font-size:14.5px;font-weight:700;letter-spacing:-0.01em}
-.card-badge{font-size:11px;color:var(--muted);background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:5px;padding:2px 8px;white-space:nowrap;flex-shrink:0}
-.card-sub{font-size:12.5px;color:var(--muted2);margin-bottom:1px}
-.card-date{font-size:11.5px;color:var(--muted);margin-bottom:12px}
-.card-body{font-size:13.5px;color:var(--muted2);line-height:1.75;margin-bottom:14px}
-.card-body ul{padding-left:18px;display:flex;flex-direction:column;gap:5px}
-.card-body li{font-size:13.5px;color:var(--muted2);line-height:1.7}
-.card-body li strong{color:var(--muted2)}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tag{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:5px;padding:3px 9px;font-size:11.5px;color:var(--muted);font-weight:500}
+.card-title{font-size:14px;font-weight:700;letter-spacing:-0.01em}
+.card-badge{font-size:10.5px;color:var(--muted);background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:4px;padding:2px 7px;white-space:nowrap;flex-shrink:0}
+.card-sub{font-size:12px;color:var(--muted2);margin-bottom:1px}
+.card-date{font-size:11px;color:var(--muted);margin-bottom:10px}
+.card-body{font-size:13px;color:var(--muted2);line-height:1.75;margin-bottom:12px}
+.card-body ul{padding-left:16px;display:flex;flex-direction:column;gap:5px}
+.card-body li{font-size:13px;color:var(--muted2);line-height:1.7}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:4px;padding:2px 8px;font-size:11px;color:var(--muted);font-weight:500}
 
-/* PROJECTS */
-.proj-card{padding:24px;border-radius:13px;border:1px solid var(--border);background:var(--surface2);margin-bottom:12px;transition:all 0.2s}
-.proj-card:hover{border-color:rgba(74,222,128,0.18);transform:translateY(-1px)}
-.proj-top{display:flex;align-items:flex-start;gap:13px;margin-bottom:12px}
-.proj-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;background:rgba(255,255,255,0.04);border:1px solid var(--border)}
+/* PROJECT CARDS */
+.proj-card{border-radius:14px;border:1px solid var(--border);background:var(--surface2);margin-bottom:14px;overflow:hidden;transition:border-color 0.2s}
+.proj-card:hover{border-color:rgba(74,222,128,0.2)}
+.proj-main{padding:22px 24px}
+.proj-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px}
+.proj-num{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'DM Mono',monospace;color:var(--accent);flex-shrink:0;background:var(--accent2);border:1px solid rgba(74,222,128,0.18)}
 .proj-name{font-size:15px;font-weight:700;letter-spacing:-0.01em;margin-bottom:2px}
-.proj-sub{font-size:12px;color:var(--muted);font-weight:500}
-.proj-desc{font-size:13.5px;color:var(--muted2);line-height:1.75;margin-bottom:12px}
-.proj-insight{background:rgba(74,222,128,0.04);border:1px solid rgba(74,222,128,0.1);border-radius:8px;padding:10px 13px;font-size:12.5px;color:#86efac;margin-bottom:14px;line-height:1.65}
+.proj-sub{font-size:11.5px;color:var(--muted);font-weight:500}
+.proj-value{font-size:13.5px;color:var(--text);font-weight:500;margin-bottom:10px;line-height:1.6}
+.proj-bullets{padding-left:16px;margin-bottom:14px;display:flex;flex-direction:column;gap:5px}
+.proj-bullets li{font-size:13px;color:var(--muted2);line-height:1.65}
 .proj-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.proj-link{font-size:12px;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:5px;padding:5px 11px;border-radius:7px;background:rgba(74,222,128,0.07);border:1px solid rgba(74,222,128,0.14);transition:background 0.2s}
-.proj-link:hover{background:rgba(74,222,128,0.13)}
+.proj-link{font-size:11.5px;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:6px;background:var(--accent2);border:1px solid rgba(74,222,128,0.18);transition:background 0.2s}
+.proj-link:hover{background:rgba(74,222,128,0.2)}
+.proj-expand-btn{font-size:11.5px;font-weight:600;color:var(--blue);display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:6px;background:var(--blue2);border:1px solid rgba(96,165,250,0.2);cursor:pointer;transition:all 0.2s;user-select:none}
+.proj-expand-btn:hover{background:rgba(96,165,250,0.18)}
+.proj-expand-btn .arrow{transition:transform 0.25s;display:inline-block}
+.proj-expand-btn.open .arrow{transform:rotate(180deg)}
+
+/* EXPANDED PANEL */
+.proj-panel{display:none;border-top:1px solid var(--border);background:var(--surface3)}
+.proj-panel.open{display:block}
+.panel-tabs{display:flex;border-bottom:1px solid var(--border);padding:0 24px}
+.panel-tab{font-size:11.5px;font-weight:600;color:var(--muted);padding:12px 14px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all 0.2s;letter-spacing:0.03em}
+.panel-tab:hover{color:var(--muted2)}
+.panel-tab.active{color:var(--text);border-bottom-color:var(--accent)}
+.panel-body{padding:24px}
+.panel-content{display:none}
+.panel-content.active{display:block}
+
+/* ARCHITECTURE DIAGRAM */
+.arch-diagram{display:flex;flex-direction:column;gap:8px;align-items:center}
+.arch-row{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
+.arch-node{padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;text-align:center;min-width:120px;line-height:1.3}
+.arch-node.input{background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.25);color:var(--amber)}
+.arch-node.agent{background:var(--accent2);border:1px solid rgba(74,222,128,0.25);color:#86efac}
+.arch-node.infra{background:var(--blue2);border:1px solid rgba(96,165,250,0.25);color:var(--blue)}
+.arch-node.output{background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.25);color:#c4b5fd}
+.arch-node.tool{background:rgba(251,146,60,0.1);border:1px solid rgba(251,146,60,0.25);color:#fb923c}
+.arch-arrow{color:var(--muted);font-size:16px;flex-shrink:0}
+.arch-label{font-size:10.5px;color:var(--muted);text-align:center;margin-top:4px}
+.arch-divider{width:100%;height:1px;background:var(--border);margin:10px 0}
+.arch-section-title{font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+
+/* DEMO */
+.demo-window{background:#0a0d12;border-radius:10px;border:1px solid var(--border);overflow:hidden;font-family:'DM Mono',monospace}
+.demo-bar{background:var(--surface3);padding:9px 14px;display:flex;align-items:center;gap:7px;border-bottom:1px solid var(--border)}
+.demo-dot{width:10px;height:10px;border-radius:50%}
+.demo-title{font-size:11px;color:var(--muted);margin-left:4px;letter-spacing:0.03em}
+.demo-body{padding:16px 18px;font-size:12px;line-height:1.8;color:#8a96aa;min-height:120px}
+.demo-body .input-line{color:var(--amber);margin-bottom:8px}
+.demo-body .divider{color:var(--muted);margin:6px 0}
+.demo-body .agent-label{color:var(--blue);font-weight:500}
+.demo-body .agent-out{color:#c4b5fd;margin-bottom:4px}
+.demo-body .final{color:var(--accent)}
+.demo-run-btn{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--accent);background:var(--accent2);border:1px solid rgba(74,222,128,0.2);border-radius:6px;padding:6px 12px;cursor:pointer;margin-bottom:14px;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+.demo-run-btn:hover{background:rgba(74,222,128,0.2)}
+.demo-output{display:none}
+.demo-output.visible{display:block}
+.typing-line{opacity:0;transform:translateY(4px);transition:opacity 0.3s,transform 0.3s}
+.typing-line.show{opacity:1;transform:none}
+
+/* ENTERPRISE NOTE */
+.enterprise-note{font-size:13px;color:var(--muted2);line-height:1.8;margin-bottom:14px}
+.enterprise-note strong{color:var(--text)}
+.integration-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.integration-item{padding:10px 14px;border-radius:8px;background:var(--surface);border:1px solid var(--border);font-size:12px;color:var(--muted2)}
+.integration-item strong{color:var(--text);display:block;font-size:11.5px;margin-bottom:2px}
 
 /* ACHIEVEMENTS */
-.achievement-card{padding:24px;border-radius:13px;border:1px solid var(--border);background:var(--surface2);margin-bottom:12px;transition:border-color 0.2s}
-.achievement-card:hover{border-color:rgba(255,255,255,0.13)}
-.comp-photo{width:100%;border-radius:10px;margin:16px 0;object-fit:cover;max-height:260px;border:1px solid var(--border)}
-.quote-block{border-left:2px solid rgba(74,222,128,0.4);padding-left:16px;margin-top:16px}
-.quote-text{font-size:13.5px;color:var(--muted2);line-height:1.8;font-style:italic}
-.quote-attr{font-size:12px;color:var(--muted);margin-top:8px;font-weight:500}
+.achievement-card{padding:22px 24px;border-radius:12px;border:1px solid var(--border);background:var(--surface2);margin-bottom:10px;transition:border-color 0.2s}
+.achievement-card:hover{border-color:var(--border2)}
+.comp-photo{width:100%;border-radius:9px;margin:14px 0;object-fit:cover;max-height:240px;border:1px solid var(--border)}
+.quote-block{border-left:2px solid rgba(74,222,128,0.35);padding-left:14px;margin-top:14px}
+.quote-text{font-size:13px;color:var(--muted2);line-height:1.8;font-style:italic}
+.quote-attr{font-size:11.5px;color:var(--muted);margin-top:7px;font-weight:500}
 
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.contact-card{padding:18px 20px;border-radius:12px;border:1px solid var(--border);background:var(--surface2);display:flex;align-items:center;gap:13px;transition:all 0.2s}
-.contact-card:hover{border-color:rgba(255,255,255,0.13);transform:translateY(-1px)}
-.contact-icon{font-size:20px;width:36px;text-align:center;flex-shrink:0}
-.contact-label{font-size:10.5px;color:var(--muted);font-weight:600;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:2px}
-.contact-value{font-size:12.5px;color:var(--muted2);font-weight:500}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.contact-card{padding:16px 18px;border-radius:11px;border:1px solid var(--border);background:var(--surface2);display:flex;align-items:center;gap:12px;transition:all 0.2s}
+.contact-card:hover{border-color:var(--border2);transform:translateY(-1px)}
+.contact-icon{font-size:13px;font-weight:700;font-family:'DM Mono',monospace;color:var(--accent);width:32px;text-align:center;flex-shrink:0}
+.contact-label{font-size:10px;color:var(--muted);font-weight:600;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:2px}
+.contact-value{font-size:12px;color:var(--muted2);font-weight:500}
 
-.footer{margin-top:72px;padding-top:22px;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}
+.footer{margin-top:68px;padding-top:20px;border-top:1px solid var(--border);font-size:11.5px;color:var(--muted)}
 
 @media(max-width:768px){
   body{flex-direction:column}
-  .sidebar{width:100%;height:auto;position:relative;padding:28px 20px}
-  .main{padding:28px 20px}
+  .sidebar{width:100%;height:auto;position:relative;padding:24px 18px}
+  .main{padding:24px 18px}
   nav{flex-direction:row;flex-wrap:wrap}
   .contact-grid{grid-template-columns:1fr}
+  .integration-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
 <aside class="sidebar">
-  <h1>Jessie<br>Rosendez</h1>
+  <div class="avatar-name">
+    <img src="data:image/png;base64,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" class="avatar" alt="Jessie Rosendez"/>
+    <h1>Jessie<br>Rosendez</h1>
+  </div>
   <div class="role">Business Technology &amp; AI</div>
   <div class="school">University of Miami Herbert Business School</div>
 
   <nav>
     <a href="#about" class="active"><span class="dot"></span>About</a>
     <a href="#education"><span class="dot"></span>Education</a>
-    <a href="#experience"><span class="dot"></span>Experience</a>
+    <a href="#experience"><span class="dot"></span>Work</a>
     <a href="#projects"><span class="dot"></span>Projects</a>
-    <a href="#achievements"><span class="dot"></span>Achievements</a>
+    <a href="#achievements"><span class="dot"></span>Recognition</a>
     <a href="#contact"><span class="dot"></span>Contact</a>
   </nav>
 
@@ -125,7 +183,7 @@ section{margin-bottom:76px}
     <a href="https://www.linkedin.com/in/jessierosendez/" target="_blank" title="LinkedIn">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
     </a>
-    <a href="/cdn-cgi/l/email-protection#afc5cadcdcc6caddc0dccac1cbcad5efc8c2cec6c381ccc0c2" title="Email">
+    <a href="/cdn-cgi/l/email-protection#7e141b0d0d171b0c110d1b101a1b043e19131f1712501d1113" title="Email">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
     </a>
   </div>
@@ -133,20 +191,16 @@ section{margin-bottom:76px}
 
 <main class="main">
 
-  <!-- ABOUT -->
   <section id="about">
     <div class="section-label">About</div>
     <p class="about-text">
-      I am a senior at the University of Miami Herbert Business School studying Business Technology with a concentration in Artificial Intelligence. I graduate in May 2026.
+      I am a senior at the University of Miami Herbert Business School studying Business Technology with a concentration in Artificial Intelligence, graduating May 2026. Outside of school I have been building AI agent systems and learning how to put them to work inside real organizations.
     </p>
     <p class="about-text">
-      My background sits at the intersection of business operations, finance, and applied AI. I have worked inside a <strong>large private single family office</strong> where I built automation tools, synthesized financial reporting across departments, and evaluated enterprise software vendors for cybersecurity risk and compliance. That environment taught me how to think about technology in terms of operational reality, not just technical capability.
+      My work experience spans <strong>operations, finance, and technology management</strong>. I spent a summer inside a $50B+ single family office building automation tools, synthesizing reporting across departments, and evaluating enterprise software for compliance risk. That environment taught me how technology decisions actually get made at scale.
     </p>
     <p class="about-text">
-      In parallel, I have been building AI agent systems using <strong>Azure AI Foundry, Python, and the Model Context Protocol</strong>. I am interested in roles where I can help organizations understand and adopt AI thoughtfully, with a clear view of governance, risk, and long term value.
-    </p>
-    <p class="about-text">
-      I am also a <strong>First Generation college student</strong>, a Dean's List honoree, and a first place case competition winner at the Herbert Business School.
+      I am targeting roles in <strong>technology, finance, and AI startups</strong> where I can help organizations compete and strengthen their competitive advantage.
     </p>
     <div class="about-tags">
       <span class="about-tag">Azure AI Foundry</span>
@@ -159,7 +213,6 @@ section{margin-bottom:76px}
     </div>
   </section>
 
-  <!-- EDUCATION -->
   <section id="education">
     <div class="section-label">Education</div>
     <div class="card">
@@ -170,7 +223,7 @@ section{margin-bottom:76px}
       <div class="card-sub">University of Miami Herbert Business School &middot; Coral Gables, FL</div>
       <div class="card-date">2022 &ndash; Present</div>
       <div class="card-body">
-        <p style="margin-bottom:10px">Relevant coursework includes AI Cloud Computing, Machine Learning, AI Programming, Quantitative Business Analytics, Database Management Systems, and Technology Project Management.</p>
+        <p>Coursework: AI Cloud Computing, Machine Learning, AI Programming, Quantitative Business Analytics, Database Management Systems, Technology Project Management.</p>
       </div>
       <div class="tags">
         <span class="tag">Dean's List</span>
@@ -181,9 +234,8 @@ section{margin-bottom:76px}
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section id="experience">
-    <div class="section-label">Experience</div>
+    <div class="section-label">Work</div>
 
     <div class="card">
       <div class="card-header">
@@ -194,18 +246,13 @@ section{margin-bottom:76px}
       <div class="card-date">June 2025 &ndash; August 2025</div>
       <div class="card-body">
         <ul>
-          <li>Designed and deployed automation systems for recurring financial, operational, and compliance reporting workflows using advanced Excel scripting, reducing manual data handling across a <strong>$50B+ single family office</strong>.</li>
-          <li>Synthesized 50+ departmental, financial, and third party vendor reports into a 45 page strategic overview presented to the COO and senior leadership to inform multi billion dollar asset allocation decisions.</li>
-          <li>Evaluated 14 enterprise software platforms for cybersecurity risk, consolidating threat assessments and recommending process controls to improve data governance and regulatory compliance across all departments.</li>
-          <li>Collaborated with the Head of Tax to redesign GP/LP restructuring workflows, including annuity trust note payment schedules and GRATs for a new property acquisition.</li>
+          <li>Built automation systems for financial and compliance reporting across a <strong>$50B+ single family office</strong>, reducing manual data handling across departments.</li>
+          <li>Synthesized 50+ departmental and vendor reports into a 45 page strategic overview presented to the COO to inform multi billion dollar asset allocation decisions.</li>
+          <li>Evaluated 14 enterprise software platforms for cybersecurity risk and recommended process controls to improve data governance across all departments.</li>
         </ul>
       </div>
       <div class="tags">
-        <span class="tag">Financial Operations</span>
-        <span class="tag">Automation</span>
-        <span class="tag">Vendor Risk Assessment</span>
-        <span class="tag">Excel</span>
-        <span class="tag">Compliance</span>
+        <span class="tag">Financial Operations</span><span class="tag">Automation</span><span class="tag">Vendor Risk Assessment</span><span class="tag">Excel</span><span class="tag">Compliance</span>
       </div>
     </div>
 
@@ -218,15 +265,12 @@ section{margin-bottom:76px}
       <div class="card-date">June 2024 &ndash; August 2024</div>
       <div class="card-body">
         <ul>
-          <li>Supported development operations for the <strong>Fontainebleau Las Vegas</strong> ($1.2B mixed use development), coordinating on site reviews and tenant buildouts for Alexander Wang and Dolce &amp; Gabbana.</li>
-          <li>Built Excel tracking models for project costs, vendor payments, and timeline variances to enable real time reporting; selected to oversee a $200M+ UHNW private residential development.</li>
+          <li>Supported development operations for <strong>Fontainebleau Las Vegas</strong> ($1.2B mixed use development), coordinating site reviews and tenant buildouts for Alexander Wang and Dolce &amp; Gabbana.</li>
+          <li>Built Excel tracking models for project costs and timeline variances; selected to oversee a $200M+ UHNW private residential development.</li>
         </ul>
       </div>
       <div class="tags">
-        <span class="tag">Project Tracking</span>
-        <span class="tag">Client Relations</span>
-        <span class="tag">Real Estate Development</span>
-        <span class="tag">Excel</span>
+        <span class="tag">Project Tracking</span><span class="tag">Client Relations</span><span class="tag">Real Estate Development</span><span class="tag">Excel</span>
       </div>
     </div>
 
@@ -239,116 +283,359 @@ section{margin-bottom:76px}
       <div class="card-date">December 2024 &ndash; February 2025</div>
       <div class="card-body">
         <ul>
-          <li>Underwrote a $46M multifamily acquisition in Florida by building a full valuation model integrating rent rolls, market comps, capital expenditure budgets, and debt financing assumptions.</li>
-          <li>Developed a 10 year pro forma with sensitivity analyses on rent growth, cap rates, and SOFR forward curves; structured a preferred equity waterfall across GP/LP investors at multiple IRR hurdles.</li>
-          <li>Results indicated approximately 14% LP IRR and 1.6x equity multiple. Presented findings through a professional investment memorandum and won first place, earning a sponsored trip to New York.</li>
+          <li>Underwrote a $46M multifamily acquisition in Florida, building a full valuation model with rent rolls, market comps, capital expenditure budgets, and a 10 year pro forma with sensitivity analysis.</li>
+          <li>Structured a preferred equity waterfall at multiple IRR hurdles. Results indicated 14% LP IRR and 1.6x equity multiple. Won first place and a $3,000 prize.</li>
         </ul>
       </div>
       <div class="tags">
-        <span class="tag">Financial Modeling</span>
-        <span class="tag">Real Estate Underwriting</span>
-        <span class="tag">DCF Analysis</span>
-        <span class="tag">Capital Structure</span>
-        <span class="tag">Investment Memo</span>
+        <span class="tag">Financial Modeling</span><span class="tag">Real Estate Underwriting</span><span class="tag">DCF Analysis</span><span class="tag">Capital Structure</span><span class="tag">Investment Memo</span>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects">
     <div class="section-label">Projects</div>
 
-    <div class="proj-card">
-      <div class="proj-top">
-        <div class="proj-icon">🔁</div>
-        <div>
-          <div class="proj-name">Customer Feedback Orchestrator</div>
-          <div class="proj-sub">Multi Agent Pipeline &middot; Azure AI Foundry &middot; Spring 2026</div>
+    <!-- PROJECT 1 -->
+    <div class="proj-card" id="proj1">
+      <div class="proj-main">
+        <div class="proj-top">
+          <div class="proj-num">01</div>
+          <div>
+            <div class="proj-name">Customer Feedback Orchestrator</div>
+            <div class="proj-sub">Multi Agent Pipeline &middot; Azure AI Foundry &middot; Spring 2026</div>
+          </div>
+        </div>
+        <div class="proj-value">Three specialized agents run in sequence to summarize, classify, and act on customer feedback with no manual input.</div>
+        <ul class="proj-bullets">
+          <li>Each agent receives the prior agent's output as context, forming a complete reasoning chain from raw input to business action.</li>
+          <li>Replaces a multi step manual review process with a fully automated pipeline built on Azure's agent framework.</li>
+        </ul>
+        <div class="proj-footer">
+          <div class="tags">
+            <span class="tag">Azure AI Foundry</span><span class="tag">GPT-4.1</span><span class="tag">agent-framework</span><span class="tag">Python AsyncIO</span><span class="tag">Pydantic</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <a href="https://github.com/jessie-rosendez/ai-multi-agent-orchestration" target="_blank" class="proj-link">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+            <span class="proj-expand-btn" onclick="togglePanel('panel1',this)">
+              Architecture &amp; Demo <span class="arrow">&#8964;</span>
+            </span>
+          </div>
         </div>
       </div>
-      <div class="proj-desc">
-        Three AI agents run in sequence to process customer feedback without manual input. The first agent summarizes the raw input. The second classifies it as positive, negative, or a feature request. The third recommends a business action. Each agent receives the prior agent's output as context and builds on it.
-      </div>
-      <div class="proj-insight">
-        This demonstrates sequential multi agent orchestration using Azure's agent framework. The pipeline replaces a multi step manual review workflow with a fully automated reasoning chain.
-      </div>
-      <div class="proj-footer">
-        <div class="tags">
-          <span class="tag">Azure AI Foundry</span>
-          <span class="tag">GPT-4.1</span>
-          <span class="tag">agent-framework</span>
-          <span class="tag">Python AsyncIO</span>
-          <span class="tag">Pydantic</span>
+      <div class="proj-panel" id="panel1">
+        <div class="panel-tabs">
+          <div class="panel-tab active" onclick="switchTab(this,'arch1')">Architecture</div>
+          <div class="panel-tab" onclick="switchTab(this,'demo1')">Live Demo</div>
+          <div class="panel-tab" onclick="switchTab(this,'ent1')">Enterprise Fit</div>
         </div>
-        <a href="https://github.com/jessie-rosendez/ai-multi-agent-orchestration" target="_blank" class="proj-link">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
+        <div class="panel-body">
+          <div class="panel-content active" id="arch1">
+            <div class="arch-section-title">Pipeline Flow</div>
+            <div class="arch-diagram">
+              <div class="arch-row">
+                <div class="arch-node input">Raw Customer<br>Feedback</div>
+                <div class="arch-arrow">&#8594;</div>
+                <div class="arch-node infra">Azure AI Foundry<br><span style="font-size:10px;opacity:0.7">GPT-4.1 + agent-framework</span></div>
+              </div>
+              <div class="arch-row" style="margin:4px 0">
+                <div class="arch-arrow" style="transform:rotate(90deg)">&#8594;</div>
+              </div>
+              <div class="arch-row">
+                <div class="arch-node agent">Agent 01<br><span style="font-size:10px;opacity:0.8">Summarizer</span></div>
+                <div class="arch-arrow">&#8594;</div>
+                <div class="arch-node agent">Agent 02<br><span style="font-size:10px;opacity:0.8">Classifier</span></div>
+                <div class="arch-arrow">&#8594;</div>
+                <div class="arch-node agent">Agent 03<br><span style="font-size:10px;opacity:0.8">Action Recommender</span></div>
+                <div class="arch-arrow">&#8594;</div>
+                <div class="arch-node output">Structured Output<br><span style="font-size:10px;opacity:0.8">Summary + Label + Action</span></div>
+              </div>
+              <div style="margin-top:12px;font-size:11.5px;color:var(--muted);text-align:center;">Each agent passes its full output as context to the next agent in the chain</div>
+            </div>
+            <div class="arch-divider"></div>
+            <div class="arch-section-title">Key Design Choices</div>
+            <div style="font-size:12.5px;color:var(--muted2);line-height:1.8">
+              Each agent receives the full prior context chain, not just its immediate input. SequentialBuilder from the agent-framework library orchestrates the handoff. AzureCliCredential handles secure authentication without hardcoded keys. Python AsyncIO enables non-blocking execution across the pipeline.
+            </div>
+          </div>
+          <div class="panel-content" id="demo1">
+            <div class="arch-section-title" style="margin-bottom:12px">Simulated Run</div>
+            <button class="demo-run-btn" onclick="runDemo('demo1-output')">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><polygon points="2,1 9,5 2,9"/></svg>
+              Run Pipeline
+            </button>
+            <div class="demo-window">
+              <div class="demo-bar">
+                <div class="demo-dot" style="background:#ff5f57"></div>
+                <div class="demo-dot" style="background:#ffbd2e"></div>
+                <div class="demo-dot" style="background:#28ca42"></div>
+                <div class="demo-title">feedback_orchestrator.py</div>
+              </div>
+              <div class="demo-body">
+                <div class="input-line">INPUT: "I use the dashboard every day but the bright screen is harsh on my eyes at night. A dark mode option would make it much more comfortable."</div>
+                <div class="demo-output" id="demo1-output">
+                  <div class="typing-line" data-delay="300"><span class="divider">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span></div>
+                  <div class="typing-line" data-delay="600"><span class="agent-label">01 [summarizer]</span></div>
+                  <div class="typing-line" data-delay="900"><span class="agent-out">Customer requests a dark mode option to reduce eye strain when using the dashboard at night.</span></div>
+                  <div class="typing-line" data-delay="1200"><span class="divider">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span></div>
+                  <div class="typing-line" data-delay="1500"><span class="agent-label">02 [classifier]</span></div>
+                  <div class="typing-line" data-delay="1800"><span class="agent-out">Classification: Feature request</span></div>
+                  <div class="typing-line" data-delay="2100"><span class="divider">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span></div>
+                  <div class="typing-line" data-delay="2400"><span class="agent-label">03 [actions]</span></div>
+                  <div class="typing-line" data-delay="2700"><span class="final">Log as enhancement request for product backlog.</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-content" id="ent1">
+            <div class="enterprise-note">
+              This pipeline can be deployed inside any organization that handles customer feedback at volume. The orchestration pattern is modular: swap in a different classifier or add a fourth agent for escalation routing without changing the core pipeline.
+            </div>
+            <div class="integration-grid">
+              <div class="integration-item"><strong>CRM Integration</strong>Pipe output directly into Salesforce or HubSpot ticket queues</div>
+              <div class="integration-item"><strong>Support Platforms</strong>Connect to Zendesk or Intercom via webhook on pipeline completion</div>
+              <div class="integration-item"><strong>Analytics</strong>Stream classifications into a BI dashboard for trend tracking over time</div>
+              <div class="integration-item"><strong>Slack Alerts</strong>Trigger notifications when high priority negative feedback is detected</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="proj-card">
-      <div class="proj-top">
-        <div class="proj-icon">🤖</div>
-        <div>
-          <div class="proj-name">AI Inventory Agent</div>
-          <div class="proj-sub">MCP Integration &middot; Azure AI Foundry &middot; Spring 2026</div>
+    <!-- PROJECT 2 -->
+    <div class="proj-card" id="proj2">
+      <div class="proj-main">
+        <div class="proj-top">
+          <div class="proj-num">02</div>
+          <div>
+            <div class="proj-name">AI Inventory Agent</div>
+            <div class="proj-sub">MCP Integration &middot; Azure AI Foundry &middot; Spring 2026</div>
+          </div>
+        </div>
+        <div class="proj-value">An agent that connects to live inventory data via a custom MCP server and returns restock and clearance recommendations autonomously.</div>
+        <ul class="proj-bullets">
+          <li>Queries stock levels and weekly sales in real time, applies business logic, and returns structured output without human intervention at each step.</li>
+          <li>Includes both a local custom MCP server and remote MCP integration via the Microsoft Learn Docs API.</li>
+        </ul>
+        <div class="proj-footer">
+          <div class="tags">
+            <span class="tag">Azure AI Foundry</span><span class="tag">GPT-4.1</span><span class="tag">MCP</span><span class="tag">FastMCP</span><span class="tag">Python AsyncIO</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <a href="https://github.com/jessie-rosendez/ai-inventory-agent" target="_blank" class="proj-link">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+            <span class="proj-expand-btn" onclick="togglePanel('panel2',this)">
+              Architecture &amp; Demo <span class="arrow">&#8964;</span>
+            </span>
+          </div>
         </div>
       </div>
-      <div class="proj-desc">
-        An agent that connects to a custom MCP server exposing live inventory and sales data as callable tools. The agent queries stock levels and weekly sales, applies business logic to identify restock and clearance conditions, and returns structured recommendations. Also includes remote MCP integration via the Microsoft Learn Docs API.
-      </div>
-      <div class="proj-insight">
-        Built with both a local custom MCP server and a remote MCP client. The agent decides when to call tools, retrieves live data, evaluates conditions, and returns actionable output without human intervention at each step.
-      </div>
-      <div class="proj-footer">
-        <div class="tags">
-          <span class="tag">Azure AI Foundry</span>
-          <span class="tag">GPT-4.1</span>
-          <span class="tag">MCP</span>
-          <span class="tag">FastMCP</span>
-          <span class="tag">Python AsyncIO</span>
+      <div class="proj-panel" id="panel2">
+        <div class="panel-tabs">
+          <div class="panel-tab active" onclick="switchTab(this,'arch2')">Architecture</div>
+          <div class="panel-tab" onclick="switchTab(this,'demo2')">Live Demo</div>
+          <div class="panel-tab" onclick="switchTab(this,'ent2')">Enterprise Fit</div>
         </div>
-        <a href="https://github.com/jessie-rosendez/ai-inventory-agent" target="_blank" class="proj-link">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
+        <div class="panel-body">
+          <div class="panel-content active" id="arch2">
+            <div class="arch-section-title">System Architecture</div>
+            <div class="arch-diagram">
+              <div class="arch-row">
+                <div class="arch-node input">User Prompt</div>
+                <div class="arch-arrow">&#8594;</div>
+                <div class="arch-node infra">Azure AI Agent<br><span style="font-size:10px;opacity:0.7">GPT-4.1 via Azure AI Foundry</span></div>
+              </div>
+              <div class="arch-row" style="margin:6px 0">
+                <div style="text-align:center;font-size:11px;color:var(--muted)">Tool calls via MCP protocol</div>
+              </div>
+              <div class="arch-row">
+                <div class="arch-node tool">Local MCP Server<br><span style="font-size:10px;opacity:0.8">FastMCP + custom tools</span></div>
+                <div class="arch-arrow">&#8596;</div>
+                <div class="arch-node tool">Remote MCP Server<br><span style="font-size:10px;opacity:0.8">MS Learn Docs API</span></div>
+              </div>
+              <div class="arch-row" style="margin:6px 0">
+                <div style="text-align:center;font-size:11px;color:var(--muted)">Tools exposed to agent</div>
+              </div>
+              <div class="arch-row">
+                <div class="arch-node agent" style="min-width:90px">get_inventory()</div>
+                <div class="arch-node agent" style="min-width:90px">get_sales()</div>
+                <div class="arch-node agent" style="min-width:90px">check_reorder()</div>
+              </div>
+              <div class="arch-row" style="margin-top:8px">
+                <div class="arch-node output">Structured Recommendations<br><span style="font-size:10px;opacity:0.8">Restock + Clearance Actions</span></div>
+              </div>
+            </div>
+            <div class="arch-divider"></div>
+            <div class="arch-section-title">MCP Design Pattern</div>
+            <div style="font-size:12.5px;color:var(--muted2);line-height:1.8">
+              The agent does not have direct database access. Instead it calls tools exposed by the MCP server, which act as a controlled interface to the underlying data. This pattern mirrors how enterprise systems enforce separation of concerns: the AI reasons and decides, the tools execute and return data.
+            </div>
+          </div>
+          <div class="panel-content" id="demo2">
+            <div class="arch-section-title" style="margin-bottom:12px">Simulated Run</div>
+            <button class="demo-run-btn" onclick="runDemo('demo2-output')">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><polygon points="2,1 9,5 2,9"/></svg>
+              Run Agent
+            </button>
+            <div class="demo-window">
+              <div class="demo-bar">
+                <div class="demo-dot" style="background:#ff5f57"></div>
+                <div class="demo-dot" style="background:#ffbd2e"></div>
+                <div class="demo-dot" style="background:#28ca42"></div>
+                <div class="demo-title">inventory_agent.py</div>
+              </div>
+              <div class="demo-body">
+                <div class="input-line">PROMPT: "Check current inventory levels and identify any items that need restocking or clearance."</div>
+                <div class="demo-output" id="demo2-output">
+                  <div class="typing-line" data-delay="300"><span class="divider">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span></div>
+                  <div class="typing-line" data-delay="500"><span class="agent-label">[tool call]</span> <span class="agent-out">get_inventory() &#8594; 12 SKUs returned</span></div>
+                  <div class="typing-line" data-delay="900"><span class="agent-label">[tool call]</span> <span class="agent-out">get_sales(period=7d) &#8594; weekly velocity data</span></div>
+                  <div class="typing-line" data-delay="1300"><span class="agent-label">[tool call]</span> <span class="agent-out">check_reorder(threshold=0.2) &#8594; 3 items flagged</span></div>
+                  <div class="typing-line" data-delay="1700"><span class="divider">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span></div>
+                  <div class="typing-line" data-delay="2000"><span class="final">RESTOCK: Widget A (stock: 8, avg weekly sales: 42)</span></div>
+                  <div class="typing-line" data-delay="2300"><span class="final">RESTOCK: Widget C (stock: 3, avg weekly sales: 29)</span></div>
+                  <div class="typing-line" data-delay="2600"><span style="color:#fb923c">CLEARANCE: Product X (stock: 94, avg weekly sales: 2, 47 weeks supply)</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-content" id="ent2">
+            <div class="enterprise-note">
+              The MCP server acts as a controlled interface between the AI and live business data. Enterprises can expose any internal data source as MCP tools without giving the model direct database access. This makes the agent auditable, secure, and easy to extend.
+            </div>
+            <div class="integration-grid">
+              <div class="integration-item"><strong>ERP Systems</strong>Wrap SAP, Oracle, or NetSuite inventory APIs as MCP tools</div>
+              <div class="integration-item"><strong>Warehousing</strong>Connect to WMS platforms for real time stock level queries</div>
+              <div class="integration-item"><strong>Auto Purchasing</strong>Add a purchase order tool to close the loop automatically</div>
+              <div class="integration-item"><strong>Scheduled Runs</strong>Deploy on a cron to generate daily inventory intelligence reports</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="proj-card">
-      <div class="proj-top">
-        <div class="proj-icon">💸</div>
-        <div>
-          <div class="proj-name">AI Expense Agent</div>
-          <div class="proj-sub">Agentic Tool Use &middot; Azure AI Foundry &middot; Spring 2026</div>
+    <!-- PROJECT 3 -->
+    <div class="proj-card" id="proj3">
+      <div class="proj-main">
+        <div class="proj-top">
+          <div class="proj-num">03</div>
+          <div>
+            <div class="proj-name">AI Expense Agent</div>
+            <div class="proj-sub">Agentic Tool Use &middot; Azure AI Foundry &middot; Spring 2026</div>
+          </div>
+        </div>
+        <div class="proj-value">Reads an expense file, itemizes it, and submits a formatted claim from a single user prompt with no manual formatting required.</div>
+        <ul class="proj-bullets">
+          <li>The model parses unstructured financial data, decides when to call the submit tool, passes structured parameters, and confirms the action.</li>
+          <li>A direct example of agents replacing repetitive document processing work in a business context.</li>
+        </ul>
+        <div class="proj-footer">
+          <div class="tags">
+            <span class="tag">Azure AI Foundry</span><span class="tag">GPT-4.1</span><span class="tag">agent-framework</span><span class="tag">Pydantic</span><span class="tag">Python</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <a href="https://github.com/jessie-rosendez/ai-expense-agent" target="_blank" class="proj-link">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+            <span class="proj-expand-btn" onclick="togglePanel('panel3',this)">
+              Architecture &amp; Demo <span class="arrow">&#8964;</span>
+            </span>
+          </div>
         </div>
       </div>
-      <div class="proj-desc">
-        Reads expense data from an uploaded file, parses and itemizes it autonomously, and submits a formatted claim to a specified recipient. The entire process runs from a single user prompt with no manual formatting or data entry required.
-      </div>
-      <div class="proj-insight">
-        Demonstrates agentic tool use: the model parses unstructured financial data, decides when to call the submit tool, passes structured parameters, and confirms the action. A practical example of how agents can replace repetitive document processing work.
-      </div>
-      <div class="proj-footer">
-        <div class="tags">
-          <span class="tag">Azure AI Foundry</span>
-          <span class="tag">GPT-4.1</span>
-          <span class="tag">agent-framework</span>
-          <span class="tag">Pydantic</span>
-          <span class="tag">Python</span>
+      <div class="proj-panel" id="panel3">
+        <div class="panel-tabs">
+          <div class="panel-tab active" onclick="switchTab(this,'arch3')">Architecture</div>
+          <div class="panel-tab" onclick="switchTab(this,'demo3')">Live Demo</div>
+          <div class="panel-tab" onclick="switchTab(this,'ent3')">Enterprise Fit</div>
         </div>
-        <a href="https://github.com/jessie-rosendez/ai-expense-agent" target="_blank" class="proj-link">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
+        <div class="panel-body">
+          <div class="panel-content active" id="arch3">
+            <div class="arch-section-title">Agent Flow</div>
+            <div class="arch-diagram">
+              <div class="arch-row">
+                <div class="arch-node input">data.txt<br><span style="font-size:10px;opacity:0.8">Raw expense file</span></div>
+                <div class="arch-arrow">&#8594;</div>
+                <div class="arch-node input">User Prompt<br><span style="font-size:10px;opacity:0.8">"Process my expenses"</span></div>
+              </div>
+              <div class="arch-row" style="margin:6px 0">
+                <div class="arch-arrow" style="transform:rotate(90deg)">&#8594;</div>
+              </div>
+              <div class="arch-row">
+                <div class="arch-node infra">Azure AI Agent<br><span style="font-size:10px;opacity:0.7">GPT-4.1 + agent-framework</span></div>
+              </div>
+              <div class="arch-row" style="margin:6px 0">
+                <div style="font-size:11px;color:var(--muted)">Parses, itemizes, validates via Pydantic</div>
+              </div>
+              <div class="arch-row">
+                <div class="arch-node tool">submit_claim()<br><span style="font-size:10px;opacity:0.8">Tool with approval_mode="never_require"</span></div>
+              </div>
+              <div class="arch-row" style="margin-top:6px">
+                <div class="arch-node output">Email sent to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="10756860757e63756350737f7e647f637f3e737f7d">[email&#160;protected]</a><br><span style="font-size:10px;opacity:0.8">Itemized claim with total</span></div>
+              </div>
+            </div>
+            <div class="arch-divider"></div>
+            <div class="arch-section-title">Key Design Note</div>
+            <div style="font-size:12.5px;color:var(--muted2);line-height:1.8">
+              The agent uses Pydantic for tool parameter validation, ensuring the model passes correctly typed and structured data before any action executes. The approval mode setting controls whether the agent requires human confirmation before submitting, making it easy to toggle between fully autonomous and supervised operation.
+            </div>
+          </div>
+          <div class="panel-content" id="demo3">
+            <div class="arch-section-title" style="margin-bottom:12px">Simulated Run</div>
+            <button class="demo-run-btn" onclick="runDemo('demo3-output')">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><polygon points="2,1 9,5 2,9"/></svg>
+              Run Agent
+            </button>
+            <div class="demo-window">
+              <div class="demo-bar">
+                <div class="demo-dot" style="background:#ff5f57"></div>
+                <div class="demo-dot" style="background:#ffbd2e"></div>
+                <div class="demo-dot" style="background:#28ca42"></div>
+                <div class="demo-title">expense_agent.py</div>
+              </div>
+              <div class="demo-body">
+                <div class="input-line">PROMPT: "Submit an expense claim for the items in my file."</div>
+                <div class="demo-output" id="demo3-output">
+                  <div class="typing-line" data-delay="300"><span class="divider">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span></div>
+                  <div class="typing-line" data-delay="500"><span class="agent-label">[parsing]</span> <span class="agent-out">data.txt &#8594; 4 expense items detected</span></div>
+                  <div class="typing-line" data-delay="900"><span class="agent-label">[validating]</span> <span class="agent-out">Pydantic schema check passed</span></div>
+                  <div class="typing-line" data-delay="1300"><span class="agent-label">[tool call]</span> <span class="agent-out">submit_claim(to="<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a1c4d9d1c4cfd2c4d2e1c2cecfd5ced2ce8fc2cecc">[email&#160;protected]</a>")</span></div>
+                  <div class="typing-line" data-delay="1700"><span class="divider">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span></div>
+                  <div class="typing-line" data-delay="1900"><span class="agent-out">Subject: Expense Claim</span></div>
+                  <div class="typing-line" data-delay="2100"><span class="agent-out">  - Flight MIA to NYC: 40.00</span></div>
+                  <div class="typing-line" data-delay="2300"><span class="agent-out">  - Hotel (2 nights): 20.00</span></div>
+                  <div class="typing-line" data-delay="2500"><span class="agent-out">  - Client dinner: 7.50</span></div>
+                  <div class="typing-line" data-delay="2700"><span class="agent-out">  - Ground transport: 2.00</span></div>
+                  <div class="typing-line" data-delay="2900"><span class="final">Total: 09.50 &#8212; Claim submitted successfully.</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-content" id="ent3">
+            <div class="enterprise-note">
+              Any organization processing high volumes of expense reports, invoices, or financial documents can deploy this pattern. The submit tool can be swapped for any downstream action: posting to an ERP, triggering an approval workflow, or logging to a finance system.
+            </div>
+            <div class="integration-grid">
+              <div class="integration-item"><strong>ERP Integration</strong>Post parsed claims directly to SAP Concur or Workday Expenses</div>
+              <div class="integration-item"><strong>Approval Workflows</strong>Route to manager via email or Slack before final submission</div>
+              <div class="integration-item"><strong>Audit Trail</strong>Log all parsed items and decisions for finance compliance</div>
+              <div class="integration-item"><strong>Invoice Processing</strong>Extend to vendor invoices, PO matching, or AP automation</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
   </section>
 
-  <!-- ACHIEVEMENTS -->
   <section id="achievements">
-    <div class="section-label">Achievements</div>
+    <div class="section-label">Recognition</div>
 
     <div class="achievement-card">
       <div class="card-header">
@@ -356,71 +643,84 @@ section{margin-bottom:76px}
         <div class="card-badge">January 2025</div>
       </div>
       <div class="card-sub">Miami Herbert Business School &middot; Real Estate and Finance Association</div>
-      <div style="margin-top:14px;font-size:13.5px;color:var(--muted2);line-height:1.75;">
-        Presented a full investment thesis and valuation model for a $46M multifamily acquisition in Florida. The analysis included rent roll modeling, capital expenditure assumptions, market comparables, a 10 year pro forma with sensitivity analysis, and a preferred equity waterfall structure. The team won first place and a $3,000 prize, earning a sponsored trip to New York.
+      <div style="margin-top:12px;font-size:13px;color:var(--muted2);line-height:1.75;">
+        Won first place and a $3,000 prize. Sponsored trip to New York.
       </div>
-      <img src="case-competition.jpg" alt="First place case competition win at Miami Herbert Business School, January 2025" class="comp-photo" onerror="this.style.display='none'"/>
+      <img src="case-competition.jpg" alt="First place case competition win at Miami Herbert Business School" class="comp-photo" onerror="this.style.display='none'"/>
     </div>
 
     <div class="achievement-card">
       <div class="card-header">
         <div class="card-title">Letter of Recommendation</div>
-        <div class="card-badge">February 2026</div>
+        <div class="card-badge">March 2026</div>
       </div>
-      <div class="card-sub">Dr. Ingrid Vasiliu Feltes, MD, EMBA &middot; University of Miami Herbert Business School</div>
+      <div class="card-sub">Dr. Ingrid Vasiliu Feltes, MD, EMBA &middot; Faculty, Miami Herbert Business School &middot; Former Chief Quality Officer, UHealth</div>
       <div class="quote-block">
         <p class="quote-text">"Jessie distinguished himself through intellectual curiosity and professional initiative. His analyses reflected systems-level thinking; he evaluated proposed solutions in light of operational workflows, incentive structures, compliance requirements, risk exposure, and long-term strategic impact rather than focusing solely on technical feasibility."</p>
-        <p class="quote-attr">&mdash; Dr. Ingrid Vasiliu Feltes, Faculty, Miami Herbert Business School &bull; Former Chief Quality and Safety Officer, UHealth</p>
+        <p class="quote-attr">&mdash; Dr. Ingrid Vasiliu Feltes</p>
       </div>
-      <div class="quote-block" style="margin-top:14px">
-        <p class="quote-text">"He demonstrated a mature and nuanced understanding of digital ethics, governance, and responsible innovation. He appreciates that AI and data-driven systems must operate within clear ethical guardrails, robust governance structures, and a sustained commitment to long-term trust."</p>
+      <div class="quote-block" style="margin-top:12px">
+        <p class="quote-text">"He demonstrated a mature and nuanced understanding of digital ethics, governance, and responsible innovation."</p>
         <p class="quote-attr">&mdash; Dr. Ingrid Vasiliu Feltes</p>
       </div>
     </div>
 
     <div class="achievement-card">
       <div class="card-header">
-        <div class="card-title">Academic Recognition</div>
+        <div class="card-title">Letter of Recommendation</div>
+        <div class="card-badge">March 2026</div>
       </div>
-      <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px">
-        <span class="tag" style="font-size:12.5px;padding:5px 12px">Dean's List</span>
-        <span class="tag" style="font-size:12.5px;padding:5px 12px">First Generation Scholar</span>
-        <span class="tag" style="font-size:12.5px;padding:5px 12px">Real Estate Advisory Board Scholar</span>
-        <span class="tag" style="font-size:12.5px;padding:5px 12px">Microsoft AI Engineer Associate (AI-102) &mdash; In Progress</span>
+      <div class="card-sub">Rod G. Haywood, J.D. &middot; Lecturer, Business Law &middot; Miami Herbert Business School</div>
+      <div class="quote-block">
+        <p class="quote-text">"Jessie is a Top Five Percent, well-rounded student of business as I have ever had the pleasure of instructing. Most any organization will most certainly advance via a professional association with Jessie Rosendez given his particularly hard to find skill set in young people of today."</p>
+        <p class="quote-attr">&mdash; Rod G. Haywood, J.D. &bull; 30+ years in higher education &bull; 5,000+ students instructed</p>
+      </div>
+      <div class="quote-block" style="margin-top:12px">
+        <p class="quote-text">"Very rarely have I happened upon students who take expressly seriously the acquisition of knowledge to the level of Jessie's efforts in and beyond my course experience."</p>
+        <p class="quote-attr">&mdash; Rod G. Haywood, J.D.</p>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <div class="card-header"><div class="card-title">Academic Recognition</div></div>
+      <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:7px">
+        <span class="tag" style="font-size:12px;padding:4px 11px">Dean's List</span>
+        <span class="tag" style="font-size:12px;padding:4px 11px">First Generation Scholar</span>
+        <span class="tag" style="font-size:12px;padding:4px 11px">Real Estate Advisory Board Scholar</span>
+        <span class="tag" style="font-size:12px;padding:4px 11px">Microsoft AI Engineer Associate (AI-102) &mdash; In Progress</span>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="section-label">Contact</div>
     <div class="contact-grid">
-      <a href="/cdn-cgi/l/email-protection#8ae0eff9f9e3eff8e5f9efe4eeeff0caede7ebe3e6a4e9e5e7" class="contact-card">
-        <div class="contact-icon">✉️</div>
+      <a href="/cdn-cgi/l/email-protection#d0bab5a3a3b9b5a2bfa3b5beb4b5aa90b7bdb1b9bcfeb3bfbd" class="contact-card">
+        <div class="contact-icon">@</div>
         <div>
           <div class="contact-label">Email</div>
-          <div class="contact-value"><span class="__cf_email__" data-cfemail="22484751514b47504d51474c46475862454f434b4e0c414d4f">[email&#160;protected]</span></div>
+          <div class="contact-value"><span class="__cf_email__" data-cfemail="c5afa0b6b6aca0b7aab6a0aba1a0bf85a2a8a4aca9eba6aaa8">[email&#160;protected]</span></div>
         </div>
       </a>
-      <a href="/cdn-cgi/l/email-protection#056f647732353745686c64686c2b606170" class="contact-card">
-        <div class="contact-icon">🎓</div>
+      <a href="/cdn-cgi/l/email-protection#ef858e9dd8dfddaf82868e8286c18a8b9a" class="contact-card">
+        <div class="contact-icon">@</div>
         <div>
           <div class="contact-label">University</div>
-          <div class="contact-value"><span class="__cf_email__" data-cfemail="aac0cbd89d9a98eac7c3cbc7c384cfcedf">[email&#160;protected]</span></div>
+          <div class="contact-value"><span class="__cf_email__" data-cfemail="7b111a094c4b493b16121a1612551e1f0e">[email&#160;protected]</span></div>
         </div>
       </a>
       <a href="https://www.linkedin.com/in/jessierosendez/" target="_blank" class="contact-card">
-        <div class="contact-icon">💼</div>
+        <div class="contact-icon">in</div>
         <div>
           <div class="contact-label">LinkedIn</div>
           <div class="contact-value">/in/jessierosendez</div>
         </div>
       </a>
       <a href="https://github.com/jessie-rosendez" target="_blank" class="contact-card">
-        <div class="contact-icon">⌨️</div>
+        <div class="contact-icon">gh</div>
         <div>
           <div class="contact-label">GitHub</div>
-          <div class="contact-value">jar702-shippuden</div>
+          <div class="contact-value">jessie-rosendez</div>
         </div>
       </a>
     </div>
@@ -429,4 +729,47 @@ section{margin-bottom:76px}
   <div class="footer">Jessie Rosendez &middot; Miami, FL &middot; 2026</div>
 </main>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-stati
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Nav scroll tracking
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+
+// Toggle panel
+function togglePanel(panelId, btn) {
+  const panel = document.getElementById(panelId);
+  const isOpen = panel.classList.contains('open');
+  panel.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+}
+
+// Switch tab
+function switchTab(clickedTab, contentId) {
+  const panel = clickedTab.closest('.proj-panel');
+  panel.querySelectorAll('.panel-tab').forEach(t => t.classList.remove('active'));
+  panel.querySelectorAll('.panel-content').forEach(c => c.classList.remove('active'));
+  clickedTab.classList.add('active');
+  document.getElementById(contentId).classList.add('active');
+}
+
+// Animated demo
+function runDemo(outputId) {
+  const output = document.getElementById(outputId);
+  output.classList.add('visible');
+  const lines = output.querySelectorAll('.typing-line');
+  lines.forEach(line => { line.classList.remove('show'); });
+  lines.forEach(line => {
+    const delay = parseInt(line.dataset.delay) || 0;
+    setTimeout(() => line.classList.add('show'), delay);
+  });
+}
+</script>
+</body>
+</html>
