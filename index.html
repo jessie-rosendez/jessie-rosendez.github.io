@@ -59,7 +59,7 @@ section{margin-bottom:72px}
 .card-body ul{padding-left:16px;display:flex;flex-direction:column;gap:5px}
 .card-body li{font-size:13px;color:var(--muted2);line-height:1.7}
 .tags{display:flex;flex-wrap:wrap;gap:5px}
-.tag{background:rgba(0,0,0,0.04);border:1px solid var(--border);border-radius:4px;padding:2px 8px;font-size:11px;color:var(--muted);font-weight:500}
+.tag{background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.15);border-radius:4px;padding:2px 8px;font-size:11px;color:#3d4555;font-weight:500}
 
 /* PROJECT CARDS */
 .proj-card{border-radius:14px;border:1px solid var(--border);background:var(--surface2);margin-bottom:14px;overflow:hidden;transition:border-color 0.2s}
@@ -194,13 +194,13 @@ section{margin-bottom:72px}
   <section id="about">
     <div class="section-label">About</div>
     <p class="about-text">
-      I build software and ship it. Most recently I built a <strong>full-stack AI platform for wealth management</strong> that's currently being shown to advisors at national firms. I've also built multi-agent pipelines, MCP integrations, and agentic tool-use systems on Azure AI Foundry.
+      I build software and ship it. Most recently I built a <strong>full-stack AI platform for wealth management</strong> that is currently being shown to advisors at national firms. I have also built multi-agent pipelines, MCP integrations, and agentic tool-use systems on Azure AI Foundry.
     </p>
     <p class="about-text">
       My work experience spans <strong>operations, finance, and technology management</strong>. I spent a summer inside a $50B+ single family office building automation tools, synthesizing reporting across departments, and evaluating enterprise software for compliance risk. That environment taught me how technology decisions actually get made at scale.
     </p>
     <p class="about-text">
-      I'm looking for <strong>technical, customer-facing roles</strong> at companies building developer tools and infrastructure.
+      I am looking for <strong>technical, customer-facing roles</strong> at companies building developer tools and infrastructure.
     </p>
     <div class="about-tags">
       <span class="about-tag">React</span>
@@ -299,7 +299,7 @@ section{margin-bottom:72px}
     <div class="section-label">Projects</div>
 
     <!-- PROSPECT INTEL -->
-    <div class="proj-card" id="proj-pi">
+    <div class="proj-card" id="proj-pi" style="border-left:3px solid #4B9CD3">
       <div class="proj-main">
         <div class="proj-top">
           <div class="proj-num">PI</div>
@@ -308,25 +308,17 @@ section{margin-bottom:72px}
             <div class="proj-sub">Full-Stack SaaS &middot; React &middot; FastAPI &middot; Supabase &middot; 2025 &ndash; Active</div>
           </div>
         </div>
-        <div class="proj-value">End-to-end AI platform for wealth management advisors &mdash; liquidity trigger ingestion, AI-generated outreach in the advisor&rsquo;s own writing style, reply classification, and escalation management.</div>
+        <div class="proj-value">AI platform for wealth management advisors. Detects liquidity events from multiple trigger sources, generates outreach in the advisor's own writing style, classifies replies, and manages the full escalation pipeline.</div>
         <ul class="proj-bullets">
-          <li>Detects liquidity events and automatically generates personalized outreach in the advisor&rsquo;s own writing style. Currently being demoed to financial advisors at national firms.</li>
+          <li>Detects liquidity events and automatically generates personalized outreach in the advisor's own writing style. Currently being demoed to financial advisors at national firms.</li>
           <li>Full conversation pipeline: outreach, reply processing, intent classification, follow-up recommendations, and escalation. Every action logged for compliance.</li>
-          <li>Designed the intelligence layer: weak-signal detection across 25 precursor event types, entity graph resolution linking people to companies, trusts, and lenders, and a hypothesis scoring engine that surfaces liquidity probability windows before public confirmation.</li>
+          <li>Designed a prospect allocation engine that routes each opportunity to the best matched advisor using proximity scoring across geography, industry expertise, AUM range, and mutual connections. One prospect, one advisor per firm.</li>
         </ul>
         <div class="proj-footer">
           <div class="tags">
             <span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">Azure AI Foundry</span><span class="tag">GPT-4.1</span><span class="tag">Supabase</span><span class="tag">SendGrid</span><span class="tag">Railway</span><span class="tag">Vercel</span>
           </div>
           <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-            <a href="https://github.com/jessie-rosendez/prospect-intel-frontend" target="_blank" class="proj-link">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              Frontend
-            </a>
-            <a href="https://github.com/jessie-rosendez/prospect-intel-backend" target="_blank" class="proj-link">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              Backend
-            </a>
             <span class="proj-expand-btn" onclick="togglePanel('panel-pi',this)">
               Architecture &amp; Demo <span class="arrow">&#8964;</span>
             </span>
@@ -344,7 +336,7 @@ section{margin-bottom:72px}
             <div class="arch-section-title">System Pipeline</div>
             <div class="arch-diagram">
               <div class="arch-row">
-                <div class="arch-node input">Aidentify Feed<br><span style="font-size:10px;opacity:0.7">Liquidity trigger events</span></div>
+                <div class="arch-node input">Trigger Sources<br><span style="font-size:10px;opacity:0.7">Aidentified &middot; Bloomberg &middot; FactSet &middot; PitchBook &middot; Crunchbase &middot; SEC Filings &middot; News Feeds</span></div>
                 <div class="arch-arrow">&#8594;</div>
                 <div class="arch-node infra">FastAPI Backend<br><span style="font-size:10px;opacity:0.7">Railway &middot; trigger ingestion</span></div>
               </div>
@@ -371,7 +363,7 @@ section{margin-bottom:72px}
             <div class="arch-divider"></div>
             <div class="arch-section-title">Key Design Choices</div>
             <div style="font-size:12.5px;color:var(--muted2);line-height:1.8">
-              Advisor style profile is extracted once during onboarding, stored as JSON in Supabase, and injected into Agent 1 at generation time &mdash; every outreach email sounds like the advisor, not the system. FastAPI and the React frontend are fully decoupled. Agent runs, outreach messages, and activity logs are all persisted independently so the advisor can inspect every decision the system made.
+              Advisor style profile is extracted once during onboarding, stored as JSON in Supabase, and injected into Agent 1 at generation time. Every outreach email sounds like the advisor, not the system. FastAPI and the React frontend are fully decoupled. Agent runs, outreach messages, and activity logs are all persisted independently so the advisor can inspect every decision the system made.
             </div>
           </div>
           <div class="panel-content" id="demo-pi">
@@ -388,7 +380,7 @@ section{margin-bottom:72px}
                 <div class="demo-title">prospect_intel_pipeline.py</div>
               </div>
               <div class="demo-body">
-                <div class="input-line">TRIGGER: "Business Exit &middot; $47M &middot; Austin, TX &mdash; Aidentify feed"</div>
+                <div class="input-line">TRIGGER: "Business Exit &middot; $47M &middot; Austin, TX &middot; Aidentify feed"</div>
                 <div class="demo-output" id="demo-pi-output">
                   <div class="typing-line" data-delay="300"><span class="divider">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span></div>
                   <div class="typing-line" data-delay="500"><span class="agent-label">[ingestion]</span> <span class="agent-out">trigger parsed &#8594; event_type: Business Exit &middot; liquidity: $47M</span></div>
@@ -409,13 +401,13 @@ section{margin-bottom:72px}
           </div>
           <div class="panel-content" id="ent-pi">
             <div class="enterprise-note">
-              At single-advisor scale the system works immediately. The harder problem &mdash; surfaced during evaluation at a top wealth management firm &mdash; is what happens at firm-wide scale: one trigger fires, multiple advisors generate outreach to the same prospect. The allocation engine solves that.
+              At single-advisor scale the system works immediately. The harder problem, surfaced during evaluation at a top wealth management firm, is what happens at firm-wide scale: one trigger fires, multiple advisors generate outreach to the same prospect. The allocation engine solves that.
             </div>
             <div class="integration-grid">
               <div class="integration-item"><strong>Prospect Locking</strong>First advisor to claim a prospect holds an exclusive window (30&ndash;90 days, configurable). No other advisor at the firm can target the same person.</div>
               <div class="integration-item"><strong>Proximity Routing</strong>When a trigger fires, the system scores advisors by geography, AUM fit, and industry expertise before assigning the lead. Closest match gets first right of refusal.</div>
               <div class="integration-item"><strong>Compliance Audit Trail</strong>Every contact is logged: advisor ID, timestamp, classification, action taken. Full history available for compliance review without touching firm systems.</div>
-              <div class="integration-item"><strong>Intelligence Layer Design</strong>Weak-signal detection across 25 precursor event types &mdash; governance transitions, UCC filings, estate structuring &mdash; with entity graph resolution and temporal clustering to surface opportunities before public confirmation.</div>
+              <div class="integration-item"><strong>Intelligence Layer Design</strong>Weak-signal detection across 25 precursor event types: governance transitions, UCC filings, estate structuring. Entity graph resolution and temporal clustering to surface opportunities before public confirmation.</div>
             </div>
           </div>
         </div>
@@ -432,7 +424,7 @@ section{margin-bottom:72px}
             <div class="proj-sub">Multi Agent Pipeline &middot; Azure AI Foundry &middot; Spring 2026</div>
           </div>
         </div>
-        <div class="proj-value">Three specialized agents run in sequence to summarize, classify, and act on customer feedback with no manual input.</div>
+        <div class="proj-value">Takes raw customer feedback and automatically summarizes it, classifies the intent, and recommends a business action. No manual steps. Replaces a multi-step review process.</div>
         <ul class="proj-bullets">
           <li>Each agent receives the prior agent's output as context, forming a complete reasoning chain from raw input to business action.</li>
           <li>Replaces a multi step manual review process with a fully automated pipeline built on Azure's agent framework.</li>
@@ -541,7 +533,7 @@ section{margin-bottom:72px}
             <div class="proj-sub">MCP Integration &middot; Azure AI Foundry &middot; Spring 2026</div>
           </div>
         </div>
-        <div class="proj-value">An agent that connects to live inventory data via a custom MCP server and returns restock and clearance recommendations autonomously.</div>
+        <div class="proj-value">Connects to live inventory data, checks stock levels against sales trends, and recommends what to restock or clearance. Runs autonomously with no human input needed.</div>
         <ul class="proj-bullets">
           <li>Queries stock levels and weekly sales in real time, applies business logic, and returns structured output without human intervention at each step.</li>
           <li>Includes both a local custom MCP server and remote MCP integration via the Microsoft Learn Docs API.</li>
@@ -655,7 +647,7 @@ section{margin-bottom:72px}
             <div class="proj-sub">Agentic Tool Use &middot; Azure AI Foundry &middot; Spring 2026</div>
           </div>
         </div>
-        <div class="proj-value">Reads an expense file, itemizes it, and submits a formatted claim from a single user prompt with no manual formatting required.</div>
+        <div class="proj-value">Upload an expense file and the agent reads it, itemizes every line, and submits a formatted claim. One prompt, no manual formatting. Replaces repetitive document processing.</div>
         <ul class="proj-bullets">
           <li>The model parses unstructured financial data, decides when to call the submit tool, passes structured parameters, and confirms the action.</li>
           <li>A direct example of agents replacing repetitive document processing work in a business context.</li>
@@ -765,7 +757,7 @@ section{margin-bottom:72px}
 
     <div class="achievement-card">
       <div class="card-header">
-        <div class="card-title">First Place &mdash; Real Estate Case Competition</div>
+        <div class="card-title">First Place: Real Estate Case Competition</div>
         <div class="card-badge">January 2025</div>
       </div>
       <div class="card-sub">Miami Herbert Business School &middot; Real Estate and Finance Association</div>
@@ -783,11 +775,11 @@ section{margin-bottom:72px}
       <div class="card-sub">Dr. Ingrid Vasiliu Feltes, MD, EMBA &middot; Faculty, Miami Herbert Business School &middot; Former Chief Quality Officer, UHealth</div>
       <div class="quote-block">
         <p class="quote-text">"Jessie distinguished himself through intellectual curiosity and professional initiative. His analyses reflected systems-level thinking; he evaluated proposed solutions in light of operational workflows, incentive structures, compliance requirements, risk exposure, and long-term strategic impact rather than focusing solely on technical feasibility."</p>
-        <p class="quote-attr">&mdash; Dr. Ingrid Vasiliu Feltes</p>
+        <p class="quote-attr">Dr. Ingrid Vasiliu Feltes</p>
       </div>
       <div class="quote-block" style="margin-top:12px">
         <p class="quote-text">"He demonstrated a mature and nuanced understanding of digital ethics, governance, and responsible innovation."</p>
-        <p class="quote-attr">&mdash; Dr. Ingrid Vasiliu Feltes</p>
+        <p class="quote-attr">Dr. Ingrid Vasiliu Feltes</p>
       </div>
     </div>
 
@@ -799,11 +791,11 @@ section{margin-bottom:72px}
       <div class="card-sub">Rod G. Haywood, J.D. &middot; Lecturer, Business Law &middot; Miami Herbert Business School</div>
       <div class="quote-block">
         <p class="quote-text">"Jessie is a Top Five Percent, well-rounded student of business as I have ever had the pleasure of instructing. Most any organization will most certainly advance via a professional association with Jessie Rosendez given his particularly hard to find skill set in young people of today."</p>
-        <p class="quote-attr">&mdash; Rod G. Haywood, J.D. &bull; 30+ years in higher education &bull; 5,000+ students instructed</p>
+        <p class="quote-attr">Rod G. Haywood, J.D. &bull; 30+ years in higher education &bull; 5,000+ students instructed</p>
       </div>
       <div class="quote-block" style="margin-top:12px">
         <p class="quote-text">"Very rarely have I happened upon students who take expressly seriously the acquisition of knowledge to the level of Jessie's efforts in and beyond my course experience."</p>
-        <p class="quote-attr">&mdash; Rod G. Haywood, J.D.</p>
+        <p class="quote-attr">Rod G. Haywood, J.D.</p>
       </div>
     </div>
 
@@ -813,7 +805,7 @@ section{margin-bottom:72px}
         <span class="tag" style="font-size:12px;padding:4px 11px">Dean's List</span>
         <span class="tag" style="font-size:12px;padding:4px 11px">First Generation Scholar</span>
         <span class="tag" style="font-size:12px;padding:4px 11px">Real Estate Advisory Board Scholar</span>
-        <span class="tag" style="font-size:12px;padding:4px 11px">Microsoft AI Engineer Associate (AI-102) &mdash; In Progress</span>
+        <span class="tag" style="font-size:12px;padding:4px 11px">Microsoft AI Engineer Associate (AI-102), In Progress</span>
       </div>
     </div>
   </section>
