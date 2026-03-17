@@ -9,12 +9,12 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#07090f;--surface:#0c1018;--surface2:#111620;--surface3:#161c28;
-  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.1);
-  --text:#e8edf5;--muted:#5a6478;--muted2:#8a96aa;
-  --accent:#4ade80;--accent2:rgba(74,222,128,0.15);
-  --blue:#60a5fa;--blue2:rgba(96,165,250,0.12);
-  --amber:#fbbf24;
+  --bg:#ffffff;--surface:#f7f9fc;--surface2:#f0f4f8;--surface3:#e8edf4;
+  --border:rgba(0,0,0,0.08);--border2:rgba(0,0,0,0.15);
+  --text:#1a1a2e;--muted:#8896aa;--muted2:#4b5a6e;
+  --accent:#4B9CD3;--accent2:rgba(75,156,211,0.12);
+  --blue:#4B9CD3;--blue2:rgba(75,156,211,0.12);
+  --amber:#d97706;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex}
@@ -31,12 +31,12 @@ a{color:inherit;text-decoration:none}
 
 nav{display:flex;flex-direction:column;gap:2px;margin-bottom:auto}
 nav a{font-size:11.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);padding:7px 10px;border-radius:7px;display:flex;align-items:center;gap:9px;transition:all 0.2s;border:1px solid transparent}
-nav a:hover,nav a.active{color:var(--text);background:rgba(255,255,255,0.04);border-color:var(--border)}
+nav a:hover,nav a.active{color:var(--text);background:rgba(0,0,0,0.05);border-color:var(--border)}
 nav a .dot{width:4px;height:4px;border-radius:50%;background:var(--muted);flex-shrink:0;transition:background 0.2s}
 nav a:hover .dot,nav a.active .dot{background:var(--accent)}
 
 .socials{display:flex;gap:7px;margin-top:28px;padding-top:20px;border-top:1px solid var(--border)}
-.socials a{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.03);border:1px solid var(--border);color:var(--muted);transition:all 0.2s}
+.socials a{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.04);border:1px solid var(--border);color:var(--muted);transition:all 0.2s}
 .socials a:hover{color:var(--text);border-color:var(--border2)}
 
 section{margin-bottom:72px}
@@ -46,37 +46,37 @@ section{margin-bottom:72px}
 .about-text{font-size:14px;color:var(--muted2);line-height:1.9;margin-bottom:12px}
 .about-text strong{color:var(--text);font-weight:600}
 .about-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
-.about-tag{background:var(--accent2);border:1px solid rgba(74,222,128,0.18);border-radius:20px;padding:3px 12px;font-size:11.5px;color:#86efac;font-weight:500}
+.about-tag{background:var(--accent2);border:1px solid rgba(75,156,211,0.18);border-radius:20px;padding:3px 12px;font-size:11.5px;color:#1558a0;font-weight:500}
 
 .card{padding:20px 22px;border-radius:12px;border:1px solid var(--border);background:var(--surface2);margin-bottom:10px;transition:border-color 0.2s}
 .card:hover{border-color:var(--border2)}
 .card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:3px;gap:12px}
 .card-title{font-size:14px;font-weight:700;letter-spacing:-0.01em}
-.card-badge{font-size:10.5px;color:var(--muted);background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:4px;padding:2px 7px;white-space:nowrap;flex-shrink:0}
+.card-badge{font-size:10.5px;color:var(--muted);background:rgba(0,0,0,0.05);border:1px solid var(--border);border-radius:4px;padding:2px 7px;white-space:nowrap;flex-shrink:0}
 .card-sub{font-size:12px;color:var(--muted2);margin-bottom:1px}
 .card-date{font-size:11px;color:var(--muted);margin-bottom:10px}
 .card-body{font-size:13px;color:var(--muted2);line-height:1.75;margin-bottom:12px}
 .card-body ul{padding-left:16px;display:flex;flex-direction:column;gap:5px}
 .card-body li{font-size:13px;color:var(--muted2);line-height:1.7}
 .tags{display:flex;flex-wrap:wrap;gap:5px}
-.tag{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:4px;padding:2px 8px;font-size:11px;color:var(--muted);font-weight:500}
+.tag{background:rgba(0,0,0,0.04);border:1px solid var(--border);border-radius:4px;padding:2px 8px;font-size:11px;color:var(--muted);font-weight:500}
 
 /* PROJECT CARDS */
 .proj-card{border-radius:14px;border:1px solid var(--border);background:var(--surface2);margin-bottom:14px;overflow:hidden;transition:border-color 0.2s}
-.proj-card:hover{border-color:rgba(74,222,128,0.2)}
+.proj-card:hover{border-color:rgba(75,156,211,0.2)}
 .proj-main{padding:22px 24px}
 .proj-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px}
-.proj-num{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'DM Mono',monospace;color:var(--accent);flex-shrink:0;background:var(--accent2);border:1px solid rgba(74,222,128,0.18)}
+.proj-num{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'DM Mono',monospace;color:var(--accent);flex-shrink:0;background:var(--accent2);border:1px solid rgba(75,156,211,0.18)}
 .proj-name{font-size:15px;font-weight:700;letter-spacing:-0.01em;margin-bottom:2px}
 .proj-sub{font-size:11.5px;color:var(--muted);font-weight:500}
 .proj-value{font-size:13.5px;color:var(--text);font-weight:500;margin-bottom:10px;line-height:1.6}
 .proj-bullets{padding-left:16px;margin-bottom:14px;display:flex;flex-direction:column;gap:5px}
 .proj-bullets li{font-size:13px;color:var(--muted2);line-height:1.65}
 .proj-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.proj-link{font-size:11.5px;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:6px;background:var(--accent2);border:1px solid rgba(74,222,128,0.18);transition:background 0.2s}
-.proj-link:hover{background:rgba(74,222,128,0.2)}
-.proj-expand-btn{font-size:11.5px;font-weight:600;color:var(--blue);display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:6px;background:var(--blue2);border:1px solid rgba(96,165,250,0.2);cursor:pointer;transition:all 0.2s;user-select:none}
-.proj-expand-btn:hover{background:rgba(96,165,250,0.18)}
+.proj-link{font-size:11.5px;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:6px;background:var(--accent2);border:1px solid rgba(75,156,211,0.18);transition:background 0.2s}
+.proj-link:hover{background:rgba(75,156,211,0.2)}
+.proj-expand-btn{font-size:11.5px;font-weight:600;color:var(--blue);display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:6px;background:var(--blue2);border:1px solid rgba(75,156,211,0.2);cursor:pointer;transition:all 0.2s;user-select:none}
+.proj-expand-btn:hover{background:rgba(75,156,211,0.18)}
 .proj-expand-btn .arrow{transition:transform 0.25s;display:inline-block}
 .proj-expand-btn.open .arrow{transform:rotate(180deg)}
 
@@ -96,8 +96,8 @@ section{margin-bottom:72px}
 .arch-row{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
 .arch-node{padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;text-align:center;min-width:120px;line-height:1.3}
 .arch-node.input{background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.25);color:var(--amber)}
-.arch-node.agent{background:var(--accent2);border:1px solid rgba(74,222,128,0.25);color:#86efac}
-.arch-node.infra{background:var(--blue2);border:1px solid rgba(96,165,250,0.25);color:var(--blue)}
+.arch-node.agent{background:var(--accent2);border:1px solid rgba(75,156,211,0.25);color:#1558a0}
+.arch-node.infra{background:var(--blue2);border:1px solid rgba(75,156,211,0.25);color:var(--blue)}
 .arch-node.output{background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.25);color:#c4b5fd}
 .arch-node.tool{background:rgba(251,146,60,0.1);border:1px solid rgba(251,146,60,0.25);color:#fb923c}
 .arch-arrow{color:var(--muted);font-size:16px;flex-shrink:0}
@@ -107,7 +107,7 @@ section{margin-bottom:72px}
 
 /* DEMO */
 .demo-window{background:#0a0d12;border-radius:10px;border:1px solid var(--border);overflow:hidden;font-family:'DM Mono',monospace}
-.demo-bar{background:var(--surface3);padding:9px 14px;display:flex;align-items:center;gap:7px;border-bottom:1px solid var(--border)}
+.demo-bar{background:#141924;padding:9px 14px;display:flex;align-items:center;gap:7px;border-bottom:1px solid rgba(255,255,255,0.08)}
 .demo-dot{width:10px;height:10px;border-radius:50%}
 .demo-title{font-size:11px;color:var(--muted);margin-left:4px;letter-spacing:0.03em}
 .demo-body{padding:16px 18px;font-size:12px;line-height:1.8;color:#8a96aa;min-height:120px}
@@ -116,8 +116,8 @@ section{margin-bottom:72px}
 .demo-body .agent-label{color:var(--blue);font-weight:500}
 .demo-body .agent-out{color:#c4b5fd;margin-bottom:4px}
 .demo-body .final{color:var(--accent)}
-.demo-run-btn{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--accent);background:var(--accent2);border:1px solid rgba(74,222,128,0.2);border-radius:6px;padding:6px 12px;cursor:pointer;margin-bottom:14px;transition:all 0.2s;font-family:'DM Sans',sans-serif}
-.demo-run-btn:hover{background:rgba(74,222,128,0.2)}
+.demo-run-btn{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--accent);background:var(--accent2);border:1px solid rgba(75,156,211,0.2);border-radius:6px;padding:6px 12px;cursor:pointer;margin-bottom:14px;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+.demo-run-btn:hover{background:rgba(75,156,211,0.2)}
 .demo-output{display:none}
 .demo-output.visible{display:block}
 .typing-line{opacity:0;transform:translateY(4px);transition:opacity 0.3s,transform 0.3s}
@@ -134,7 +134,7 @@ section{margin-bottom:72px}
 .achievement-card{padding:22px 24px;border-radius:12px;border:1px solid var(--border);background:var(--surface2);margin-bottom:10px;transition:border-color 0.2s}
 .achievement-card:hover{border-color:var(--border2)}
 .comp-photo{width:100%;border-radius:9px;margin:14px 0;object-fit:cover;max-height:240px;border:1px solid var(--border)}
-.quote-block{border-left:2px solid rgba(74,222,128,0.35);padding-left:14px;margin-top:14px}
+.quote-block{border-left:2px solid rgba(75,156,211,0.35);padding-left:14px;margin-top:14px}
 .quote-text{font-size:13px;color:var(--muted2);line-height:1.8;font-style:italic}
 .quote-attr{font-size:11.5px;color:var(--muted);margin-top:7px;font-weight:500}
 
@@ -194,22 +194,24 @@ section{margin-bottom:72px}
   <section id="about">
     <div class="section-label">About</div>
     <p class="about-text">
-      I am a senior at the University of Miami Herbert Business School studying Business Technology with a concentration in Artificial Intelligence, graduating May 2026. Outside of school I have been building AI agent systems and learning how to put them to work inside real organizations.
+      I build software and ship it. Most recently I built a <strong>full-stack AI platform for wealth management</strong> that's currently being shown to advisors at national firms. I've also built multi-agent pipelines, MCP integrations, and agentic tool-use systems on Azure AI Foundry.
     </p>
     <p class="about-text">
       My work experience spans <strong>operations, finance, and technology management</strong>. I spent a summer inside a $50B+ single family office building automation tools, synthesizing reporting across departments, and evaluating enterprise software for compliance risk. That environment taught me how technology decisions actually get made at scale.
     </p>
     <p class="about-text">
-      I am targeting roles in <strong>technology, finance, and AI startups</strong> where I can help organizations compete and strengthen their competitive advantage.
+      I'm looking for <strong>technical, customer-facing roles</strong> at companies building developer tools and infrastructure.
     </p>
     <div class="about-tags">
-      <span class="about-tag">Azure AI Foundry</span>
+      <span class="about-tag">React</span>
+      <span class="about-tag">FastAPI</span>
+      <span class="about-tag">Supabase</span>
+      <span class="about-tag">REST APIs</span>
+      <span class="about-tag">LLM Workflows</span>
       <span class="about-tag">Python</span>
-      <span class="about-tag">Multi Agent Systems</span>
+      <span class="about-tag">Azure AI Foundry</span>
+      <span class="about-tag">Multi-Agent Systems</span>
       <span class="about-tag">MCP</span>
-      <span class="about-tag">Financial Modeling</span>
-      <span class="about-tag">AI Governance</span>
-      <span class="about-tag">Business Development</span>
     </div>
   </section>
 
@@ -295,6 +297,130 @@ section{margin-bottom:72px}
 
   <section id="projects">
     <div class="section-label">Projects</div>
+
+    <!-- PROSPECT INTEL -->
+    <div class="proj-card" id="proj-pi">
+      <div class="proj-main">
+        <div class="proj-top">
+          <div class="proj-num">PI</div>
+          <div>
+            <div class="proj-name">ProspectIntel</div>
+            <div class="proj-sub">Full-Stack SaaS &middot; React &middot; FastAPI &middot; Supabase &middot; 2025 &ndash; Active</div>
+          </div>
+        </div>
+        <div class="proj-value">End-to-end AI platform for wealth management advisors &mdash; liquidity trigger ingestion, AI-generated outreach in the advisor&rsquo;s own writing style, reply classification, and escalation management.</div>
+        <ul class="proj-bullets">
+          <li>Detects liquidity events and automatically generates personalized outreach in the advisor&rsquo;s own writing style. Currently being demoed to financial advisors at national firms.</li>
+          <li>Full conversation pipeline: outreach, reply processing, intent classification, follow-up recommendations, and escalation. Every action logged for compliance.</li>
+          <li>Designed the intelligence layer: weak-signal detection across 25 precursor event types, entity graph resolution linking people to companies, trusts, and lenders, and a hypothesis scoring engine that surfaces liquidity probability windows before public confirmation.</li>
+        </ul>
+        <div class="proj-footer">
+          <div class="tags">
+            <span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">Azure AI Foundry</span><span class="tag">GPT-4.1</span><span class="tag">Supabase</span><span class="tag">SendGrid</span><span class="tag">Railway</span><span class="tag">Vercel</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <a href="https://github.com/jessie-rosendez/prospect-intel-frontend" target="_blank" class="proj-link">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Frontend
+            </a>
+            <a href="https://github.com/jessie-rosendez/prospect-intel-backend" target="_blank" class="proj-link">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Backend
+            </a>
+            <span class="proj-expand-btn" onclick="togglePanel('panel-pi',this)">
+              Architecture &amp; Demo <span class="arrow">&#8964;</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="proj-panel" id="panel-pi">
+        <div class="panel-tabs">
+          <div class="panel-tab active" onclick="switchTab(this,'arch-pi')">Architecture</div>
+          <div class="panel-tab" onclick="switchTab(this,'demo-pi')">Pipeline Demo</div>
+          <div class="panel-tab" onclick="switchTab(this,'ent-pi')">Firm-Wide Design</div>
+        </div>
+        <div class="panel-body">
+          <div class="panel-content active" id="arch-pi">
+            <div class="arch-section-title">System Pipeline</div>
+            <div class="arch-diagram">
+              <div class="arch-row">
+                <div class="arch-node input">Aidentify Feed<br><span style="font-size:10px;opacity:0.7">Liquidity trigger events</span></div>
+                <div class="arch-arrow">&#8594;</div>
+                <div class="arch-node infra">FastAPI Backend<br><span style="font-size:10px;opacity:0.7">Railway &middot; trigger ingestion</span></div>
+              </div>
+              <div class="arch-row" style="margin:4px 0">
+                <div class="arch-arrow" style="transform:rotate(90deg)">&#8594;</div>
+              </div>
+              <div class="arch-row">
+                <div class="arch-node infra">Supabase<br><span style="font-size:10px;opacity:0.7">Auth &middot; advisor style profile &middot; prospect DB</span></div>
+                <div class="arch-arrow">&#8596;</div>
+                <div class="arch-node agent">Agent 1<br><span style="font-size:10px;opacity:0.8">Azure GPT-4.1 &middot; context + outreach</span></div>
+              </div>
+              <div class="arch-row" style="margin:4px 0">
+                <div class="arch-arrow" style="transform:rotate(90deg)">&#8594;</div>
+              </div>
+              <div class="arch-row">
+                <div class="arch-node agent">Agent 2<br><span style="font-size:10px;opacity:0.8">Classification &middot; Hot / Warm / Cold / Dead</span></div>
+                <div class="arch-arrow">&#8594;</div>
+                <div class="arch-node agent">Agent 3<br><span style="font-size:10px;opacity:0.8">Next action &middot; urgency &middot; follow-up</span></div>
+                <div class="arch-arrow">&#8594;</div>
+                <div class="arch-node output">Advisor Dashboard<br><span style="font-size:10px;opacity:0.8">React &middot; Vercel &middot; live activity log</span></div>
+              </div>
+              <div style="margin-top:10px;font-size:11px;color:var(--muted);text-align:center">Email delivery via SendGrid &middot; reply parsing via reply@parse.prospectintel.tech</div>
+            </div>
+            <div class="arch-divider"></div>
+            <div class="arch-section-title">Key Design Choices</div>
+            <div style="font-size:12.5px;color:var(--muted2);line-height:1.8">
+              Advisor style profile is extracted once during onboarding, stored as JSON in Supabase, and injected into Agent 1 at generation time &mdash; every outreach email sounds like the advisor, not the system. FastAPI and the React frontend are fully decoupled. Agent runs, outreach messages, and activity logs are all persisted independently so the advisor can inspect every decision the system made.
+            </div>
+          </div>
+          <div class="panel-content" id="demo-pi">
+            <div class="arch-section-title" style="margin-bottom:12px">Simulated Pipeline Run</div>
+            <button class="demo-run-btn" onclick="runDemo('demo-pi-output')">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><polygon points="2,1 9,5 2,9"/></svg>
+              Run Pipeline
+            </button>
+            <div class="demo-window">
+              <div class="demo-bar">
+                <div class="demo-dot" style="background:#ff5f57"></div>
+                <div class="demo-dot" style="background:#ffbd2e"></div>
+                <div class="demo-dot" style="background:#28ca42"></div>
+                <div class="demo-title">prospect_intel_pipeline.py</div>
+              </div>
+              <div class="demo-body">
+                <div class="input-line">TRIGGER: "Business Exit &middot; $47M &middot; Austin, TX &mdash; Aidentify feed"</div>
+                <div class="demo-output" id="demo-pi-output">
+                  <div class="typing-line" data-delay="300"><span class="divider">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span></div>
+                  <div class="typing-line" data-delay="500"><span class="agent-label">[ingestion]</span> <span class="agent-out">trigger parsed &#8594; event_type: Business Exit &middot; liquidity: $47M</span></div>
+                  <div class="typing-line" data-delay="900"><span class="agent-label">[persistence]</span> <span class="agent-out">prospect saved &#8594; Supabase &middot; style profile loaded</span></div>
+                  <div class="typing-line" data-delay="1300"><span class="agent-label">[agent 1]</span> <span class="agent-out">building context + drafting outreach (Azure AI Foundry &middot; gpt-4.1)...</span></div>
+                  <div class="typing-line" data-delay="1700"><span class="agent-label">[delivery]</span> <span class="agent-out">email sent via SendGrid &#8594; reply@parse.prospectintel.tech</span></div>
+                  <div class="typing-line" data-delay="2100"><span class="divider">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span></div>
+                  <div class="typing-line" data-delay="2300"><span class="agent-out">Subject: Thinking through the next chapter</span></div>
+                  <div class="typing-line" data-delay="2500"><span class="agent-out">Body: drafted in advisor style &middot; 3 paragraphs &middot; low-friction CTA</span></div>
+                  <div class="typing-line" data-delay="2900"><span class="divider">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</span></div>
+                  <div class="typing-line" data-delay="3100"><span class="agent-label">[reply]</span> <span class="agent-out">"Thanks for reaching out, open to a call next week."</span></div>
+                  <div class="typing-line" data-delay="3500"><span class="agent-label">[agent 2]</span> <span class="agent-out">classification: Warm &middot; tag: AUTO_FOLLOWUP &middot; confidence: 0.84</span></div>
+                  <div class="typing-line" data-delay="3900"><span class="agent-label">[agent 3]</span> <span class="agent-out">urgency: 48 Hours &middot; action: send follow-up, reference original obliquely</span></div>
+                  <div class="typing-line" data-delay="4300"><span class="final">activity log updated &middot; prospect queued &#8594; advisor dashboard</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-content" id="ent-pi">
+            <div class="enterprise-note">
+              At single-advisor scale the system works immediately. The harder problem &mdash; surfaced during evaluation at a top wealth management firm &mdash; is what happens at firm-wide scale: one trigger fires, multiple advisors generate outreach to the same prospect. The allocation engine solves that.
+            </div>
+            <div class="integration-grid">
+              <div class="integration-item"><strong>Prospect Locking</strong>First advisor to claim a prospect holds an exclusive window (30&ndash;90 days, configurable). No other advisor at the firm can target the same person.</div>
+              <div class="integration-item"><strong>Proximity Routing</strong>When a trigger fires, the system scores advisors by geography, AUM fit, and industry expertise before assigning the lead. Closest match gets first right of refusal.</div>
+              <div class="integration-item"><strong>Compliance Audit Trail</strong>Every contact is logged: advisor ID, timestamp, classification, action taken. Full history available for compliance review without touching firm systems.</div>
+              <div class="integration-item"><strong>Intelligence Layer Design</strong>Weak-signal detection across 25 precursor event types &mdash; governance transitions, UCC filings, estate structuring &mdash; with entity graph resolution and temporal clustering to surface opportunities before public confirmation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- PROJECT 1 -->
     <div class="proj-card" id="proj1">
